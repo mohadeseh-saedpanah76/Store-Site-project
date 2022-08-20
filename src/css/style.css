@@ -28,7 +28,7 @@ h6{
 }
 p{
     font-size: 16px;
-    color: #465b52;
+    color: #666867;
     margin: 15px 0 20px 0;
 }
 .section-p1{
@@ -49,6 +49,10 @@ body{
     padding: 20px 80px ;
     background: #e3e6f3;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 0;
+    left:0;
+    z-index: 999;
 }
 
 #navbar{
@@ -95,4 +99,21 @@ body{
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+}
+#hero h4{
+    padding-bottom: 15px ;
+}
+#hero h1 {
+    color:#088178
+}
+#hero button{
+    background-color: transparent;
+    background-image: url('/images/button.png');
+    color: #088178;
+    border: 0;
+    padding: 14px 80px 14px 65px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 15px;
 }
