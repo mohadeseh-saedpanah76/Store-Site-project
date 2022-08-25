@@ -1,6 +1,8 @@
 const bar = document.getElementById('bar');
 const close = document.getElementById('close');
 const navbar = document.getElementById('navbar');
+const MainImg = document.querySelector('#MainImg')
+const smallimg = document.querySelectorAll('.small-img')
 
 
 
@@ -15,3 +17,7 @@ if(close) {
         navbar.classList.remove('active')
     })
 }
+
+smallimg.forEach(item =>item.addEventListener('click' ,() =>{
+    MainImg.src = item.src
+}))
