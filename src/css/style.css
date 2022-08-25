@@ -124,6 +124,11 @@ button.white{
 #mobile {
     display: none;
 }
+
+#close {
+    display: none;
+}
+
 /* Home Page */
 
 /* section hero */
@@ -545,8 +550,111 @@ footer .copyright{
 
 /* End Home Page */
 
+/* shop page */
+#page-header{
+    background-image: url('/images/banner/b1.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+} 
+
+#page-header h2,
+#page-header p {
+    color: #fff;
+}
+
+#pagination {
+    text-align: center;
+}
+
+#pagination a {
+    background-color: #088178;
+    padding: 15px 20px;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: 600;
+}
+ 
+#pagination a i {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* single product */
+#pro-details {
+    display: flex;
+    margin-top: 20px;
+}
+
+#pro-details .single-pro-image {
+    width: 40%;
+    margin-right: 40px;
+}
+
+#pro-details .small-img-group {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.small-img-group .small-img-col {
+    flex-basis: 24%;
+    cursor: pointer;
+}
+
+#pro-details .single-pro-details {
+    width: 50%;
+    padding-top: 30px;
+}
+
+#pro-details .single-pro-details h4{
+    padding: 40px 0 20px 0;
+}
+
+#pro-details .single-pro-details h2{
+    font-size: 26px;
+}
+
+#pro-details .single-pro-details select {
+    display: block;
+    padding: 5px 10px;
+    margin-bottom: 10px ;
+}
+
+#pro-details .single-pro-details input {
+    width: 50px;
+    height: 47px;
+    padding-left: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+#pro-details .single-pro-details input:focus {
+    outline: none;
+}
+
+#pro-details .single-pro-details button{
+    background: #088178;
+    color: #fff;
+}
+
+#pro-details .single-pro-details span {
+    line-height: 25px;
+}
+
+
 /* Media Query */
 @media (max-width : 799px) {
+
+    .section-p1 {
+        padding: 40px 40px;
+    }
+
     #navbar {
         display: flex;
         flex-direction: column;
@@ -569,6 +677,11 @@ footer .copyright{
     #navbar li {
         margin-bottom: 25px;
     }
+
+    #navbar #close {
+        opacity: 1;
+    }
+
     #mobile {
         display: flex;
         align-items: center;
@@ -580,4 +693,126 @@ footer .copyright{
         font-size: 24px ;
         padding-left: 20px;
     }
+
+    #close {
+        display: initial;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: #222;
+        font-size: 23px;
+    }
+
+    #lg-bag {
+        display: none;
+    }
+    #hero {
+        height: 70vh;
+        padding: 0 80px;
+        background-position: top 30% right 30%;  
+    }
+    #feature {
+        justify-content: center;
+    }
+    
+    #feature .fe-box{
+        margin: 15px 15px;
+    }
+
+    #product1 .pro-container {
+        justify-content: center;
+    }
+
+    #product1 .pro {
+        margin: 15px;
+    }
+
+    #banner {
+        height: 23vh;
+    }
+    #sm-banner .banner-box {
+        min-width: 100%;
+        height: 30vh;
+    }
+    #sm-banner .banner-box2 {
+        margin-top: 20px;
+    }
+
+    #banner3 {
+        padding: 0 40px ;
+    }
+    #banner3 .banner-box {
+        width: 28%;
+    }
+   
+    #newsletter .newsform {
+        width: 70%;
+    }
 }
+
+@media (max-width : 477px) {
+    .section-p1 {
+        padding: 20px;
+    }
+    h1 {
+        font-size: 38px;
+    }
+    h2 {
+        font-size: 32px;
+    }
+    #header{
+        padding: 10px 30px;
+    }
+    #hero {
+        padding: 0 20px;
+        background-position: 55%;
+    }
+    #feature {
+        justify-content: space-between;
+    }
+    #feature .fe-box {
+        width: 155px;
+        margin: 0 0 15px 0;
+    }
+    #product1 .pro {
+        width: 100%;
+    }
+    #banner {
+        height: 40vh;
+    }
+    #sm-banner .banner-box {
+        height: 30vh;
+    }
+    #sm-banner .banner-box {
+        margin-top: 20px;
+    }
+    #banner3 {
+        padding: 0 20px;
+    }
+    #banner3 .banner-box {
+        width: 100%;
+    }
+     #newsletter {
+        padding: 40px 20px;
+     }
+     #newsletter .newsform {
+        width: 100%;
+     }
+
+     
+}
+
+@media (max-width : 1318px) {
+    #sm-banner .banner-box {
+        width: 100%;
+    }
+    #banner3 .banner-box {
+        width: 28%;
+    }
+}
+@media (max-width : 512px){
+    #banner3 .banner-box {
+        width: 100%;
+    }
+}
+
