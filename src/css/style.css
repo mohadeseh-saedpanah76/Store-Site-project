@@ -93,6 +93,7 @@ button.white{
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 #navbar li {
     list-style: none;
@@ -121,6 +122,16 @@ button.white{
     left: 20px;
 }
 
+#navbar .cart-items {
+	position: absolute;
+	top: -2px;
+	right: 5px;
+	background: #088178;
+	padding: 0 5px;
+	border-radius: 30%;
+	color: #ffffff;
+	font-size: 14px;
+}
 #mobile {
     display: none;
 }
@@ -969,7 +980,8 @@ footer .copyright{
 
     /* contact us */
     #contact-details {
-        padding: 40px 40px;
+        padding: 40px 20px;
+        margin: 30px;
     }
     #form-details {
         padding: 40px;
@@ -1083,6 +1095,32 @@ footer .copyright{
     #about-app .video{
         width: 100%;
     }
+
+    /* contact us */
+    #contact-details {
+        flex-direction: column;
+        padding: 30px 20px;
+    }
+
+    #contact-details .details {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    #contact-details .map {
+        width: 100%;
+    }
+
+    #form-details {
+        margin: 10px;
+        padding: 30px 20px;
+        flex-wrap: wrap;
+    }
+    #form-details form {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
 }
 
 @media (max-width : 1318px) {
