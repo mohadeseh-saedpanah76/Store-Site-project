@@ -5,7 +5,7 @@
       "fields": {
         "brand": "adidas",
         "title" :"Cartoon Astronaut T-Shirts",
-        "price": "$89",
+        "price": "89",
         "image": { "fields": { "file": { "url":"/images/products/f1.jpg" } } }
       }
     },
@@ -14,7 +14,7 @@
       "fields": {
         "brand": "adidas",
         "title" :"Cartoon Astronaut T-Shirts",
-        "price": "$76",
+        "price": "76",
         "image": { "fields": { "file": { "url":"/images/products/f2.jpg" } } }
       }
     },
@@ -23,7 +23,7 @@
       "fields": {
         "brand": "adidas",
         "title" :"Cartoon Astronaut T-Shirts",
-        "price": "$80",
+        "price": "80",
         "image": { "fields": { "file": { "url":"/images/products/f3.jpg" } } }
       }
     },
@@ -32,7 +32,7 @@
       "fields": {
         "brand": "adidas",
         "title" :"Cartoon Astronaut T-Shirts",
-        "price": "$79",
+        "price": "79",
         "image": { "fields": { "file": { "url":"/images/products/f4.jpg" } } }
       }
     },
@@ -41,7 +41,7 @@
       "fields": {
         "brand": "adidas",
         "title" :"Cartoon Astronaut T-Shirts",
-        "price": "$73",
+        "price":" 73",
         "image": { "fields": { "file": { "url":"/images/products/f5.jpg" } } }
       }
     },
@@ -50,7 +50,7 @@
       "fields": {
         "brand": "adidas",
         "title" :"Cartoon Astronaut T-Shirts",
-        "price": "$89",
+        "price": "89",
         "image": { "fields": { "file": { "url":"/images/products/f6.jpg" } } }
       }
     },
@@ -59,7 +59,7 @@
       "fields": {
         "brand": "adidas",
         "title" :"Cartoon Astronaut T-Shirts",
-        "price": "$69",
+        "price": "69",
         "image": { "fields": { "file": { "url":"/images/products/f7.jpg" } } }
       }
     },
@@ -68,7 +68,7 @@
       "fields": {
         "brand": "adidas",
         "title" :"Cartoon Astronaut T-Shirts",
-        "price": "$74",
+        "price":" 74",
         "image": { "fields": { "file": { "url":"/images/products/f8.jpg" } } }
       }
     }
@@ -81,7 +81,7 @@
       "fields": {
         "brand": "adidas",
         "title" :"Cartoon Astronaut T-Shirts",
-        "price": "$89",
+        "price": 89,
         "image": { "fields": { "file": { "url":"/images/products/n1.jpg" } } }
       }
     },
@@ -90,7 +90,7 @@
       "fields": {
         "brand": "adidas",
         "title" :"Cartoon Astronaut T-Shirts",
-        "price": "$76",
+        "price": 76,
         "image": { "fields": { "file": { "url":"/images/products/n2.jpg" } } }
       }
     },
@@ -99,7 +99,7 @@
       "fields": {
         "brand": "adidas",
         "title" :"Cartoon Astronaut T-Shirts",
-        "price": "$80",
+        "price": 80,
         "image": { "fields": { "file": { "url":"/images/products/n3.jpg" } } }
       }
     },
@@ -108,7 +108,7 @@
       "fields": {
         "brand": "adidas",
         "title" :"Cartoon Astronaut T-Shirts",
-        "price": "$79",
+        "price": 79,
         "image": { "fields": { "file": { "url":"/images/products/n4.jpg" } } }
       }
     },
@@ -126,7 +126,7 @@
       "fields": {
         "brand": "adidas",
         "title" :"Cartoon Astronaut T-Shirts",
-        "price": "$89",
+        "price":89,
         "image": { "fields": { "file": { "url":"/images/products/n6.jpg" } } }
       }
     },
@@ -135,7 +135,7 @@
       "fields": {
         "brand": "adidas",
         "title" :"Cartoon Astronaut T-Shirts",
-        "price": "$69",
+        "price": 69,
         "image": { "fields": { "file": { "url":"/images/products/n7.jpg" } } }
       }
     },
@@ -144,7 +144,7 @@
       "fields": {
         "brand": "adidas",
         "title" :"Cartoon Astronaut T-Shirts",
-        "price": "$74",
+        "price": 74,
         "image": { "fields": { "file": { "url":"/images/products/n8.jpg" } } }
       }
     }
