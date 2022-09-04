@@ -112,28 +112,28 @@ class View {
     }
 
     displaynewProducts(newproduct){
-        let result = ''
-        newproduct.forEach((item)=>{
-            result +=`
-            <div class="pro">
-            <img src=${item.image} alt="${item.title}">
-            <div class="des">
-                <span>${item.brand}</span>
-                <h5>${item.title}</h5>
-                <div class="star">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                </div>
-                <h4>${item.price}</h4>
-            </div>
-            <button  data-id=${item.id} class="bag-btn"><a href="#" class="cart-shopping"><i class="fa fa-cart-shopping" ></i></a></button>
-            </div>
-            `
-        })
-        newproductDom.innerHTML = result
+        // let result = ''
+        // newproduct.forEach((item)=>{
+        //     result +=`
+        //     <div class="pro">
+        //     <img src=${item.image} alt="${item.title}">
+        //     <div class="des">
+        //         <span>${item.brand}</span>
+        //         <h5>${item.title}</h5>
+        //         <div class="star">
+        //             <i class="fa-solid fa-star"></i>
+        //             <i class="fa-solid fa-star"></i>
+        //             <i class="fa-solid fa-star"></i>
+        //             <i class="fa-solid fa-star"></i>
+        //             <i class="fa-solid fa-star"></i>
+        //         </div>
+        //         <h4>${item.price}</h4>
+        //     </div>
+        //     <button  data-id=${item.id} class="bag-btn"><a href="#" class="cart-shopping"><i class="fa fa-cart-shopping" ></i></a></button>
+        //     </div>
+        //     `
+        // })
+        // newproductDom.innerHTML = result
     }
     
      // تابعی تعریف میکنیم برای  گرفتن دکمه ی افزودن به سبد خرید
@@ -207,7 +207,7 @@ class View {
             <div>
                 <i class="fa-solid fa-chevron-up" data-id=${item.id}></i>
                 <p class="item-amount">${item.amount}</p>
-                <i class="fa-solid fa-chevron-down"data-id=${item.id}></i>
+                <i class="fa-solid fa-chevron-down" data-id=${item.id}></i>
             </div>
         `
         // حالا دیو ساخته شده باید به عنوان فرزند کارت ایتم نمایش داده بشه
@@ -324,6 +324,55 @@ class View {
               this.removeProduct(id)
             }
 
+            if(e.target.classList.contains('fa-chevron-up')){
+              let addAmount = e.target
+              let id = addAmount.dataset.id
+              
+            // براساس آیدی اون محصولی که روش برای افزایش کلیک شده
+            //  اون محصول رو پیدا میکنیم و توی پروداکت میریزیم
+              let product = cart.find((item)=>{
+                return item.id ===id
+              })
+
+              product.amount+=1
+
+              this.setcartValues(cart)
+              Storage.saveCart(cart)
+
+            //   افزایش عدد یک محصول بلافاصله در سبد خرید اتافق نمیوفته 
+            // و باید یبار رفرش کرد تا تعداد بره بالا برای اینکه بلافاصله زیاد شه از مفهوم زیر استفاده میکنیم
+            addAmount.nextElementSibling.innerText = product.amount
+            }
+
+            if(e.target.classList.contains('fa-chevron-down')){
+                let lowerAmount = e.target
+                let id = lowerAmount.dataset.id
+                
+              // براساس آیدی اون محصولی که روش برای افزایش کلیک شده
+              //  اون محصول رو پیدا میکنیم و توی پروداکت میریزیم
+                let product = cart.find((item)=>{
+                  return item.id ===id
+                })
+  
+                product.amount-=1
+                
+                if(product.amount>0){
+                    
+                this.setcartValues(cart)
+                Storage.saveCart(cart)
+
+                // کد زیر یعنی یدونه قبلتر رو برگردون
+                //و کم شدن رو بلافاصله در سبد خرید نشون میده
+                lowerAmount.previousElementSibling.innerText = product.amount
+                }else{
+                    //وقتی یک محصولی رو انقدر کم میکنی تا به صفر برسه
+                    //هم باید از دام حذف بشه
+                    cartContent.removeChild(lowerAmount.parentElement.parentElement)
+                    //هم از لوکال استورج
+                    this.removeProduct(id)
+                }
+              }
+
         })
     }
 
@@ -334,7 +383,7 @@ class View {
           return item.id
         })
 
-        // بعد ایتم های داخل کارت رو به تابع کلیرپروداکت میدیم که دونه دونه میاد ایدی های داخل کارت ایتمز رو پاک میکنه
+        // بعد ایتم های داخل کارت رو به تابع ریمووپروداکت میدیم که دونه دونه میاد ایدی های داخل کارت ایتمز رو پاک میکنه
         //و در نهایت کل سبد خرید پاک میشه
        cartItems.forEach((item)=>{
         return this.removeProduct(item)
