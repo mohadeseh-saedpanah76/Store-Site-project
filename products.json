@@ -77,76 +77,58 @@
   ,
   "items2" : [
     {
-      "sys": { "id": "9" },
+      "sys": { "id": "1" },
       "fields": {
-        "brand": "adidas",
-        "title" :"Cartoon Astronaut T-Shirts",
-        "price": 89,
-        "image": { "fields": { "file": { "url":"/images/products/n1.jpg" } } }
+        "date": "13/01",
+        "title" :"The Cotton-Jersey Zip-Up Hoodie",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "image": { "fields": { "file": { "url":"/images/blog/b1.jpg" } } }
       }
     },
     {
-      "sys": { "id": "10" },
+      "sys": { "id": "2" },
       "fields": {
-        "brand": "adidas",
-        "title" :"Cartoon Astronaut T-Shirts",
-        "price": 76,
-        "image": { "fields": { "file": { "url":"/images/products/n2.jpg" } } }
+        "date": "13/04",
+        "title" :"How to Style a Quiff",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "image": { "fields": { "file": { "url":"/images/blog/b2.jpg" } } }
       }
     },
     {
-      "sys": { "id": "11" },
+      "sys": { "id": "3" },
       "fields": {
-        "brand": "adidas",
-        "title" :"Cartoon Astronaut T-Shirts",
-        "price": 80,
-        "image": { "fields": { "file": { "url":"/images/products/n3.jpg" } } }
+        "date": "12/01",
+        "title" :"Must-Have Skoter Girl items",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "image": { "fields": { "file": { "url":"/images/blog/b3.jpg" } } }
       }
     },
     {
-      "sys": { "id": "12" },
+      "sys": { "id": "4" },
       "fields": {
-        "brand": "adidas",
-        "title" :"Cartoon Astronaut T-Shirts",
-        "price": 79,
-        "image": { "fields": { "file": { "url":"/images/products/n4.jpg" } } }
+        "date": "16/01",
+        "title" :"Runway-Inspired Trends",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "image": { "fields": { "file": { "url":"/images/blog/b4.jpg" } } }
       }
     },
     {
-      "sys": { "id": "13" },
+      "sys": { "id": "5" },
       "fields": {
-        "brand": "adidas",
-        "title" :"Cartoon Astronaut T-Shirts",
-        "price": "$73",
-        "image": { "fields": { "file": { "url":"/images/products/n5.jpg" } } }
+        "date": "10/03",
+        "title" :"Runway-Inspired Trends",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "image": { "fields": { "file": { "url":"/images/blog/b5.jpg" } } }
       }
     },
     {
-      "sys": { "id": "14" },
+      "sys": { "id": "6" },
       "fields": {
-        "brand": "adidas",
-        "title" :"Cartoon Astronaut T-Shirts",
-        "price":89,
-        "image": { "fields": { "file": { "url":"/images/products/n6.jpg" } } }
+        "date": "10/06",
+        "title" :"Runway-Inspired Trends",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "image": { "fields": { "file": { "url":"/images/blog/b6.jpg" } } }
       }
-    },
-    {
-      "sys": { "id": "15" },
-      "fields": {
-        "brand": "adidas",
-        "title" :"Cartoon Astronaut T-Shirts",
-        "price": 69,
-        "image": { "fields": { "file": { "url":"/images/products/n7.jpg" } } }
-      }
-    },
-    {
-      "sys": { "id": "16" },
-      "fields": {
-        "brand": "adidas",
-        "title" :"Cartoon Astronaut T-Shirts",
-        "price": 74,
-        "image": { "fields": { "file": { "url":"/images/products/n8.jpg" } } }
-      }
-    }
+    } 
   ]
 }
