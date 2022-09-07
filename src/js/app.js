@@ -16,6 +16,7 @@ const closeCart = document.querySelector('.close-cart')
 const cartShopping = document.querySelector('.cart-shopping')
 const removeItem = document.querySelector('.remove-item')
 const removeCart = document.querySelector('#clear-cart')
+const blogDom = document.querySelector('.home-blog-container')
 
 
 if(bar) {
@@ -63,24 +64,26 @@ class Product {
  
     }
 
-   async getnewProduct(){
-     try {
-        const result =  await fetch('/products.json')
+    async getBlog(){
+    try {
+        const result = await fetch('/products.json')
         const data =  await result.json()
-        let newproduct = data.items2
-   
-       newproduct = newproduct.map((item)=>{
-           const {brand , title , price} = item.fields
-           const {id} = item.sys
-           const image = item.fields.image.fields.file.url
-           return {brand , title , price , id , image}
-        })
-   
-        return newproduct
-     } catch (error) {
+        let blogs = data.items2
+    
+        blogs = blogs.map((item)=>{
+        const {date , title , description} = item.fields
+        const {id} = item.sys
+        const image = item.fields.image.fields.file.url
+    
+        return {date , title , description , id , image}
+      })
+    
+        return blogs
+    } catch (error) {
         console.log(error)
-     }
     }
+
+   }
 }
 
 // با استفاده از کلاس ویو اطلاعات  گرفته شده در کلاس پروداکت در دام نمایش داده میشه
@@ -111,29 +114,26 @@ class View {
         productDom.innerHTML = result
     }
 
-    displaynewProducts(newproduct){
-        // let result = ''
-        // newproduct.forEach((item)=>{
-        //     result +=`
-        //     <div class="pro">
-        //     <img src=${item.image} alt="${item.title}">
-        //     <div class="des">
-        //         <span>${item.brand}</span>
-        //         <h5>${item.title}</h5>
-        //         <div class="star">
-        //             <i class="fa-solid fa-star"></i>
-        //             <i class="fa-solid fa-star"></i>
-        //             <i class="fa-solid fa-star"></i>
-        //             <i class="fa-solid fa-star"></i>
-        //             <i class="fa-solid fa-star"></i>
-        //         </div>
-        //         <h4>${item.price}</h4>
-        //     </div>
-        //     <button  data-id=${item.id} class="bag-btn"><a href="#" class="cart-shopping"><i class="fa fa-cart-shopping" ></i></a></button>
-        //     </div>
-        //     `
-        // })
-        // newproductDom.innerHTML = result
+    displayblogs(blogs){
+        let result = ''
+
+        blogs.forEach((item)=>{
+            result+=`
+            <div class="home-blog-box">
+            <div class="home-blog-img">
+                <img src=${item.image} alt=${item.title}" id="img-blog">
+            </div>
+            <div class="home-blog-details">
+                <h4>${item.title}</h4>
+                <p>${item.description}</p>
+                <a href="#">CONTINUE READING</a>
+            </div>
+            <h1>${item.date}</h1>
+        </div>
+            `
+        })
+
+        blogDom.innerHTML = result
     }
     
      // تابعی تعریف میکنیم برای  گرفتن دکمه ی افزودن به سبد خرید
@@ -423,8 +423,8 @@ class Storage {
    static saveProducts(products){
     localStorage.setItem('products' ,JSON.stringify(products))
     }
-    static savenewProducts(newproducts){
-        localStorage.setItem('newproducts' ,JSON.stringify(newproducts))
+    static saveBlogs(blogs){
+        localStorage.setItem('blogs' , JSON.stringify(blogs))
     }
 
     static getProduct(id){
@@ -475,10 +475,10 @@ document.addEventListener('DOMContentLoaded', () => {
             view.getCartButtons()
             view.cartProcess()
         })
-    product.getnewProduct()
-        .then((data)=>{
-            view.displaynewProducts(data)
-            Storage.savenewProducts(data)
-    })
+    product.getBlog()
+            .then((data)=>{
+                view.displayblogs(data)
+                Storage.saveBlogs(data)
+            })
   })
   
