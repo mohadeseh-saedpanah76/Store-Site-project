@@ -17,6 +17,17 @@ const cartShopping = document.querySelector('.cart-shopping')
 const removeItem = document.querySelector('.remove-item')
 const removeCart = document.querySelector('#clear-cart')
 const blogDom = document.querySelector('.home-blog-container')
+const signUpButton = document.querySelector('#signUp')
+const signInButton = document.querySelector('#signIn')
+const container = document.querySelector('#container')
+// const formControl = document.querySelector('.form-control')
+// const small = document.querySelector('small')
+const username = document.querySelector('.Name')
+const email = document.querySelector('.Email')
+const password = document.querySelector('.Password')
+const formContainer = document.querySelector('.form-container')
+const signUpBtn = document.querySelector('#sign-up')
+const signInBtn = document.querySelector('#sign-in')
 
 
 if(bar) {
@@ -34,6 +45,10 @@ if(close) {
 smallimg.forEach(item =>item.addEventListener('click' ,() =>{
     MainImg.src = item.src
 }))
+
+
+
+// ساخت سبد خزید
 
 // یک سبد خرید با مقدار اولیه ی خالی
 let cart = []
@@ -482,3 +497,58 @@ document.addEventListener('DOMContentLoaded', () => {
             })
   })
   
+
+  //فرم لاگین
+
+signUpButton.addEventListener('click', ()=>{
+
+    container.classList.add("right-panel-active")
+});
+
+signInButton.addEventListener('click', ()=>{
+    container.classList.remove("right-panel-active")
+});
+
+//اعتبار سنجی فرم لاگین
+
+signUpBtn.addEventListener('click', (e)=>{
+    e.preventDefault()
+    checkInputsSignUp()
+})
+
+const checkInputsSignUp = () =>{
+    const nameValue = username.value.trim()
+    const emailValue = email.value.trim()
+    const passValue = password.value.trim()
+
+    if(nameValue === ''){
+        setError(username,'Please enter your username')
+    }
+    else{
+        setSuccess(username)
+    }
+    if(emailValue === ''){
+        setError(email,'please enter your Email')
+    }
+    else{
+        setSuccess(email)
+    }
+    if(passValue === ''){
+        setError(password,'Please enter your password')
+    }
+    else{
+        setSuccess(password)
+    }
+
+}
+const setError = (input , message)=>{
+    const formControl = input.parentElement
+    const small = formControl.querySelector('small')
+    formControl.className = 'form-control error'
+    small.innerHTML = message
+}
+
+const setSuccess = (input) =>{
+    const formControl = input.parentElement
+    formControl.className = 'form-control success' 
+}
