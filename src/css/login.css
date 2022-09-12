@@ -87,10 +87,14 @@ form {
 
 input {
     background-color: #eee;
-    border: none;
+    border:1px solid #eee ;
     padding: 12px 15px;
     margin: 8px 0;
     width: 100%;
+}
+
+input:focus{
+    border:1px solid #eee ;
 }
 
 .container{
@@ -110,6 +114,36 @@ input {
     top: 0;
     height: 100%;
     transition: all 0.6s ease-in-out;
+}
+.form-container .form-control
+{
+    position: relative;
+    width: 100%;
+}
+.form-control small
+{
+    color: #ef5350;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.form-control input{
+    margin-bottom: 1rem;
+}
+.form-control.error input{
+    border-color: #ef5350;
+    border-radius: 5px;
+}
+
+.form-control.success input{
+    border-color: #66bb6a;
+    border-radius: 5px;
+}
+
+.form-control.error small{
+    visibility: visible;
 }
 
 .sign-in-container{
